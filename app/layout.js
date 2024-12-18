@@ -4,7 +4,7 @@ import { Josefin_Sans } from "next/font/google";
 import { ReservationProvider } from "./_components/ReservationContext";
 import { ToastContainer } from "react-toastify";
 import { Analytics } from "@vercel/analytics/react";
-
+import { SpeedInsights } from "@vercel/speed-insights/next";
 const josefin = Josefin_Sans({ subsets: ["latin"], display: "swap" });
 export const metadata = {
   title: {
@@ -25,6 +25,7 @@ export default function RootLayout({ children }) {
         className={`${josefin.className} flex min-h-screen flex-col bg-primary-950 text-primary-100`}
       >
         <Analytics />
+        <SpeedInsights />
         <Header />
 
         <div className="grid flex-grow px-8">
